@@ -1,6 +1,6 @@
-namespace WebFilmesApp.Models;
+namespace WebFilmes.Models;
 
-public class MovieModel
+public class Movie
 {
 	public int Id { get; set; }
 	public string Title { get; set; }
@@ -8,12 +8,12 @@ public class MovieModel
 	public string Genre { get; set; }
 	public string Director { get; set; }
 	public string Synopsis { get; set; }
-	public List<string> Cast  { get; set; }
+	// public List<string> Cast { get; set; }
 
-	public MovieModel()
-	{
-		Cast = new List<string>();
-	}
+	// public Movie()
+	// {
+	//	 Cast = new List<string>();
+	// }
 
 	public override string ToString()
 	{
