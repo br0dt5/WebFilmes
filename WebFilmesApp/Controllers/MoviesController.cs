@@ -67,6 +67,18 @@ namespace WebFilmes.Controllers
             return View(movie);
         }
 
+        // GET: Movies/Search
+        public IActionResult Search()
+        {
+            return View();
+        }
+
+        // POST: Movies/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
+        {
+            return View("Index", await _context.Movies.Where(m => m.Title.Contains(SearchPhrase)).ToListAsync());
+        }
+
         // GET: Movies/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
